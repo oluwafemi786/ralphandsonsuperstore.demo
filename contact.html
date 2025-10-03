@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    contact.html — Contact form with front-end validation.
+    Replace Google Maps iframe src with your embed link.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Ralph and Sons Superstore</title>
+  <meta name="description" content="Contact Ralph and Sons Superstore for orders, support and inquiries." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ralph and Sons Superstore</a>
+      <button id="nav-toggle-5" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-nav-5" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="products.html" class="btn small">Shop</a>
+        <button id="cart-button-5" class="cart-btn">Cart (<span id="cart-count-5">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Contact Us</h1>
+    <div class="grid cols-2 contact-grid">
+      <section>
+        <h2>Send us a message</h2>
+        <form id="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <div id="contact-success" class="form-success" aria-live="polite" hidden>Thanks — your message was sent (sample).</div>
+        </form>
+      </section>
+
+      <aside aria-labelledby="contact-details">
+        <h2 id="contact-details">Contact Details</h2>
+        <p><strong>Address:</strong> [3, Dosunmu Ayodeji Street, Alogba Ebute Ikorodu Lagos]</p>
+        <p><strong>Phone:</strong> <a href="tel:[08125479211]" style="color: white;" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">08125479211</a></p>
+        <p><strong>Email:</strong> <a href="mailto:[ralphandsonssuperstore@gmail.com]" style="color: white;" onmouseover="this.style.color='black'" onmouseout="this.style.color='white'">ralphandsonssuperstore@gmail.com</a></p>
+        <p><strong>Business Hours:</strong><br>Mon–Sat: 8:00 AM–09:00 PM<br>Sun: Closed</p>
+
+        <h3>Location</h3>
+        <!-- Replace src with your Google Maps embed link -->
+        <div class="map-placeholder">
+          <iframe title="Store location" src="https://maps.google.com/maps?q=[Insert+Address]+&output=embed" loading="lazy"></iframe>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Ralph and Sons Superstore</h4>
+        <p>© 2025 Ralph and Sons Superstore | All Rights Reserved</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>[3, Dosunmu Ayodeji Street, Alogba Ebute Ikorodu Lagos]</p>
+        <p>Phone: <a href="tel:[08125479211]">[08125479211]</a></p>
+        <p>Email: <a href="mailto:[ralphandsonssuperstore@gmail.com]">[ralphandsonssuperstore@gmail.com]</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
