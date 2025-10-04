@@ -15,6 +15,285 @@
 
   <link rel="canonical" href="https://example.com/" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Ralph and Sons Superstore",
+    "description": "POS services, Neolife supplements, SIM registration, and supermarket products.",
+    "url": "https://example.com/",
+    "telephone": "[Insert business phone number]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Insert your shop location]",
+      "addressLocality": "[City]",
+      "addressRegion": "[State]",
+      "postalCode": "[Postal Code]",
+      "addressCountry": "NG"
+    },
+    "openingHours": "Mo-Sa 08:00-19:00, Su 01:00-09:00"
+  }
+  </script>
+</head>
+<body data-shop-name="Ralph and Sons Superstore">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ralph and Sons Superstore</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="products.html" class="btn small">Shop</a>
+        <button id="cart-button" class="cart-btn" aria-label="Open cart">Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" role="region" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-heading">Ralph and Sons Superstore — Your Trusted One-Stop Shop for Everyday Needs</h1>
+          <p class="lead">We provide reliable POS services, authentic Neolife drug supplements, seamless SIM card registration, and a wide variety of supermarket products.</p>
+          <div class="hero-ctas">
+            <a href="services.html#pos" class="btn" onmouseover="this.style.color='black'" onmouseout="this.style.color='blue'">Get POS Service</a>
+            <a href="products.html?filter=neolife" class="btn outline" onmouseover="this.style.color='black'" onmouseout="this.style.color='blue'">Shop Neolife Products</a>
+            <a href="contact.html" class="btn ghost" onmouseover="this.style.color='black'" onmouseout="this.style.color='blue'">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <!-- Replace src with your hero image -->
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="container section services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Featured Services</h2>
+      <div class="grid cols-4 service-cards">
+        <article class="card" aria-labelledby="pos-title" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <div class="card-icon">💳</div>
+          <h3 id="pos-title">POS Services</h3>
+          <p>Withdrawals · Transfers · Deposits — fast and secure transactions.</p>
+        </article>
+
+        <article class="card" aria-labelledby="neolife-title" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <div class="card-icon">💊</div>
+          <h3 id="neolife-title">Neolife Supplements</h3>
+          <p>Authorized dealer for Neolife health & wellness products.</p>
+        </article>
+
+        <article class="card" aria-labelledby="sim-title" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <div class="card-icon">📱</div>
+          <h3 id="sim-title">SIM Registration</h3>
+          <p>Quick SIM card registration for major network providers.</p>
+        </article>
+
+        <article class="card" aria-labelledby="grocery-title" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <div class="card-icon">🛒</div>
+          <h3 id="grocery-title">Supermarket Products</h3>
+          <p>Groceries, household essentials, toiletries and more.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container section featured-products" aria-labelledby="featured-products-heading">
+      <h2 id="featured-products-heading">Featured Products </h2>
+      <div id="product-grid" class="grid cols-4">
+        <!-- Sample product cards - products.js (script.js) will use these or you can replace with dynamic content -->
+        <article class="product-card" data-category="neolife" data-id="p1" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="...assets/multivitamin.jpg" alt="Neolife Multivitamin - sample" loading="lazy">
+          <div class="card-body">
+            <h3>Neolife Multivitamin (Sample)</h3>
+            <p class="muted">Daily multivitamin for general wellness. (Sample)</p>
+            <div class="product-meta">
+              <span class="price">₦8,500</span>
+              <button class="btn small add-to-cart" data-id="p1">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="neolife" data-id="p2" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="...assets/nutri shake.jpg" alt="Nutrishake - sample" loading="lazy">
+          <div class="card-body">
+            <h3>Nutrishake (Sample)</h3>
+            <p class="muted">Protein and nutrition shake mix. (Sample)</p>
+            <div class="product-meta">
+              <span class="price">₦12,000</span>
+              <button class="btn small add-to-cart" data-id="p2">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="Neolife" data-id="p3" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="images/assets/" alt="Aloe vera plus - sample" loading="lazy">
+          <div class="card-body">
+            <h3>COQ 10</h3>
+            <p >Aloe vera plus</p>
+            <div class="product-meta">
+              <span class="price">₦9,000</span>
+              <button class="btn small add-to-cart" data-id="p3">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grocery" data-id="p4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="images/assets/cooking oil.jpg" alt="Large yellow plastic container of Devon Kings Pure Vegetable Oil with a red cap and a label showing a cooked chicken, nutrition facts, and text including Kings Pure Vegetable Oil, Tamper Proof Seal, Cholesterol Free, and For Cooking and Salads. The container is placed on a plain white background. The tone is neutral and informative.">
+          <div class="card-body">
+            <h3>Chilated-zinc</h3>
+            <p class="muted">Refined oil for moisturized body.</p>
+            <div class="product-meta">
+              <span class="price">₦14,500</span>
+              <button class="btn small add-to-cart" data-id="p4">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grocery" data-id="p4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="images/assets/cooking oil.jpg" alt="Large yellow plastic container of Devon Kings Pure Vegetable Oil with a red cap and a label showing a cooked chicken, nutrition facts, and text including Kings Pure Vegetable Oil, Tamper Proof Seal, Cholesterol Free, and For Cooking and Salads. The container is placed on a plain white background. The tone is neutral and informative.">
+          <div class="card-body">
+            <h3>Chilated-zinc</h3>
+            <p class="muted">Refined oil for moisturized body.</p>
+            <div class="product-meta">
+              <span class="price">₦14,500</span>
+              <button class="btn small add-to-cart" data-id="p4">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grocery" data-id="p4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="images/assets/cooking oil.jpg" alt="Large yellow plastic container of Devon Kings Pure Vegetable Oil with a red cap and a label showing a cooked chicken, nutrition facts, and text including Kings Pure Vegetable Oil, Tamper Proof Seal, Cholesterol Free, and For Cooking and Salads. The container is placed on a plain white background. The tone is neutral and informative.">
+          <div class="card-body">
+            <h3>Chilated-zinc</h3>
+            <p class="muted">Refined oil for moisturized body.</p>
+            <div class="product-meta">
+              <span class="price">₦14,500</span>
+              <button class="btn small add-to-cart" data-id="p4">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grocery" data-id="p4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="images/assets/cooking oil.jpg" alt="Large yellow plastic container of Devon Kings Pure Vegetable Oil with a red cap and a label showing a cooked chicken, nutrition facts, and text including Kings Pure Vegetable Oil, Tamper Proof Seal, Cholesterol Free, and For Cooking and Salads. The container is placed on a plain white background. The tone is neutral and informative.">
+          <div class="card-body">
+            <h3>Chilated-zinc</h3>
+            <p class="muted">Refined oil for moisturized body.</p>
+            <div class="product-meta">
+              <span class="price">₦14,500</span>
+              <button class="btn small add-to-cart" data-id="p4">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grocery" data-id="p4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+          <img src="images/assets/cooking oil.jpg" alt="Large yellow plastic container of Devon Kings Pure Vegetable Oil with a red cap and a label showing a cooked chicken, nutrition facts, and text including Kings Pure Vegetable Oil, Tamper Proof Seal, Cholesterol Free, and For Cooking and Salads. The container is placed on a plain white background. The tone is neutral and informative.">
+          <div class="card-body">
+            <h3>Chilated-zinc</h3>
+            <p class="muted">Refined oil for moisturized body.</p>
+            <div class="product-meta">
+              <span class="price">₦14,500</span>
+              <button class="btn small add-to-cart" data-id="p4">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Quick contact -->
+    <section class="container section contact-cta" aria-labelledby="contact-cta-heading">
+      <h2 id="contact-cta-heading">Need help or want to place a bulk order?</h2>
+      <p style="color: white;">Call us at <a href="tel:[2348125479211]" style="color: black;" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"> 08125479211</a> or <a href="contact.html" style="color: black; "  onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">send a message</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" style="background-color: rgb(148, 117, 206); color: white;">
+    <div class="container footer-inner">
+      <div>
+        <h4>Ralph and Sons Superstore</h4>
+        <p>© 2025 Ralph and Sons Superstore | All Rights Reserved</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="services.html" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">Services</a></li>
+          <li><a href="products.html" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">Products</a></li>
+          <li><a href="contact.html" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>[3, Dosunmu Ayodeji Street, Alogba Ebute Ikorodu Lagos]</p>
+        <p>Phone: <a href="tel:[Insert business phone number]" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'"> 08125479211</a></p>
+        <p>Email: <a href="mailto:[Insert business email]" onmouseover="this.style.color='white'" onmouseout="this.style.color='black'">ralphandsonssuperstore@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="cart-title">
+      <button class="modal-close" id="cart-close" aria-label="Close cart">&times;</button>
+      <h2 id="cart-title">Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-actions">
+        <button id="clear-cart" class="btn outline">Clear Cart</button>
+        <button id="checkout" class="btn">Checkout (Sample)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+  <script>
+  AOS.init();
+</script>
+
+<script>
+  // ✅ Animation initialization
+  AOS.init({
+    offset: 100,          // distance in px before the element triggers animation
+    duration: 1000,       // animation duration (ms)
+    easing: 'ease-in-out', // animation style
+    delay: 200,           // default delay (ms)
+    once: true            // animation happens only once
+  });
+</script>
+
+
+</body>
+</html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    index.html — Homepage
+    Replace placeholders: data-shop-name, meta description, hero image src, contact placeholders.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ralph and Sons Superstore — Home</title>
+  <meta name="description" content="Ralph and Sons Superstore — POS services, Neolife supplements, SIM registration, and supermarket products." />
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="product.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

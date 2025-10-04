@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 <head>
@@ -183,3 +184,89 @@
 
 </body>
 </html>
+=======
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    products.html — Products listing, filters, and simple cart interactions (client-side only).
+    Replace product images and prices with your catalog.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Ralph and Sons Superstore</title>
+  <meta name="description" content="Shop Neolife supplements, groceries, and household essentials. Client-side cart supported." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ralph and Sons Superstore</a>
+      <button id="nav-toggle-4" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-nav-4" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="products.html" class="btn small">Shop</a>
+        <button id="cart-button-4" class="cart-btn">Cart (<span id="cart-count-4">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Products</h1>
+
+    <div class="product-controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="neolife">Neolife</button>
+        <button class="filter-btn" data-filter="grocery">Grocery</button>
+        <button class="filter-btn" data-filter="household">Household</button>
+      </div>
+      <div class="search">
+        <label for="search" class="visually-hidden">Search products</label>
+        <input id="search" type="search" placeholder="Search products..." />
+      </div>
+    </div>
+
+    <div id="products-grid" class="grid cols-4" aria-live="polite">
+      <!-- Products will be loaded from products data in script.js if present.
+           If not, keep the sample cards from index.html or duplicate them here. -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Ralph and Sons Superstore</h4>
+        <p>© 2025 Ralph and Sons Superstore | All Rights Reserved</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>[3, Dosunmu Ayodeji Street, Alogba Ebute Ikorodu Lagos]</p>
+        <p>Phone: <a href="tel:[Insert business phone number]">[08125479211]</a></p>
+        <p>Email: <a href="mailto:[Insert business email]">[ralphandsonssuperstore@gmail.com]</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+>>>>>>> db47bfc6990f0170974803357cbdfd27761b5e7c
