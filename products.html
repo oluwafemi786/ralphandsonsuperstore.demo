@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    products.html — Products listing, filters, and simple cart interactions (client-side only).
+    Replace product images and prices with your catalog.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — Ralph and Sons Superstore</title>
+  <meta name="description" content="Shop Neolife supplements, groceries, and household essentials. Client-side cart supported." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/assets/BRO EMMA LOGO.jpg" alt="Ralph and Sons Superstore Logo" class="brand-logo">
+        <span>Ralph and Sons Superstore</span>
+      </a>
+      <button id="nav-toggle-4" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-nav-4" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="products.html" class="btn small">Shop</a>
+        <button id="cart-button-4" class="cart-btn">Cart (<span id="cart-count-4">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 style="color: white;">Products</h1>
+
+    <div class="product-controls">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="neolife">Neolife</button>
+        <button class="filter-btn" data-filter="grocery">Grocery</button>
+      </div>
+      <div class="search">
+        <label for="search" class="visually-hidden">Search products</label>
+        <input id="searchInput" type="search" placeholder="Search products..." oninput="searchProduct()" />
+      </div>
+    </div>
+
+    <div id="products-grid" class="grid cols-4" aria-live="polite">
+
+     <section class="container section featured-products" aria-labelledby="featured-products-heading">
+  <h2 id="featured-products-heading">Featured Products</h2>
+  <div id="product-grid" class="product-grid">
+    <!-- Each product card -->
+    <div class="product-card">
+      <img src="images/assets/multivitamin.jpg" alt="Neolife Multivitamin">
+      <h3>Neolife Multivitamin</h3>
+      <p>Daily multivitamin for general wellness.</p>
+      <span class="price">₦8,500</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/assets/nutri shake.jpg" alt="NutriShake">
+      <h3>NutriShake</h3>
+      <p>Protein and nutrition shake mix.</p>
+      <span class="price">₦25,000</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/assets/aloe vera.jpg" alt="COQ 10">
+      <h3>COQ 10</h3>
+      <p>Aloe vera plus</p>
+      <span class="price">₦45,000</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/assets/zinc chilated.jpg" alt="Chelated Zinc">
+      <h3>Chelated Zinc</h3>
+      <p>Refined oil for moisturized body.</p>
+      <span class="price">₦26,000</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/assets/tre en en.jpg" alt="Tre en en">
+      <h3>Tre en en</h3>
+      <p>Refined oil for moisturized body.</p>
+      <span class="price">₦16,000</span>
+      <button class="add-cart">Add to Cart</button>
+  </div>
+    <div class="product-card">
+      <img src="images/assets/calmag.jpg" alt="calmag">
+      <h3>calmag-Chelated</h3>
+      <p>help with metabolism of carbohydrate and protein .</p>
+      <span class="price">₦15,000</span>
+      <button class="add-cart">Add to Cart</button>
+  </div>
+    <div class="product-card">
+      <img src="images/assets/tre en en.jpg" alt="Tre en en">
+      <h3>Amitone</h3>
+      <p>natural muscle toner.</p>
+      <span class="price">₦25,000</span>
+      <button class="add-cart">Add to Cart</button>
+  </div>
+
+    <div class="product-card">
+      <img src="images/assets/grocery 1.jpg" alt="Grocery 1">
+      <h3>grocery 1</h3>
+      <p>Visit us for any kind of grocery you want.</p>
+      <span class="price">on visit</span>
+      <button class="add-cart" style="color: white;"><a href="contact.html">visit now</a></button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/assets/grocery 2.jpeg" alt="Grocery 2">
+      <h3>grocery 2</h3>
+      <p>Visit us for any kind of grocery you want.</p>
+      <span class="price">on visit</span>
+      <button class="add-cart" style="color: white;"><a href="contact.html">visit now</a></button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/assets/grocery 3.jpg" alt="Grocery 3">
+      <h3>grocery 3</h3>
+      <p>Visit us for any kind of grocery you want.</p>
+      <span class="price">on visit</span>
+      <button class="add-cart" style="color: white;"><a href="contact.html">visit now</a></button>
+    </div>
+
+</section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>Ralph and Sons Superstore</h4>
+        <p>© 2025 Ralph and Sons Superstore | All Rights Reserved</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p>[3, Dosunmu Ayodeji Street, Alogba Ebute Ikorodu Lagos]</p>
+        <p>Phone: <a href="tel:[Insert business phone number]">[08125479211]</a></p>
+        <p>Email: <a href="mailto:[Insert business email]">[ralphandsonssuperstore@gmail.com]</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+  // Mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const siteNav = document.getElementById('site-nav');
+
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    siteNav.classList.toggle('active');
+
+    // Accessibility toggle
+    const expanded = navToggle.classList.contains('active');
+    navToggle.setAttribute('aria-expanded', expanded);
+  });
+</script>
+
+</body>
+</html>
