@@ -23,11 +23,22 @@ function initNavToggle() {
     });
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
+});
+
 
 /* ---------- Sample product data (replace or extend) ---------- */
 const sampleProducts = [
   { id: 'p1', name: 'Multivitamin', category: 'neolife', price: 8500, description: 'Daily multivitamin for general wellness.', img: 'images/assets/multivitamin.jpg' },
-  { id: 'p2', name: 'Nutri shake', category: 'neolife', price: 25000, description: 'Protein and nutrition shake mix.', img: 'images/assets/nutri shake.jpg' },
+  { id: 'p2', name: 'Nutri shake', category: 'neolife', price: 25000, description: 'Protein and nutrition shake mix.', img: 'images/assets/nutri-shake.jpg' },
   { id: 'p3', name: 'Aloe vera', category: 'Neolife', price: 45000, description: 'health care.', img: 'images/assets/aloe vera.jpg' },
   { id: 'p4', name: 'Zinc Chilated', category: 'Neolife', price: 26000, description: 'for infertility and digestion', img: 'images/assets/zinc chilated.jpg' },
   { id: 'p5', name: 'Amitone', category: 'Neolife', price: 25000, description: 'natural muscle toner.', img: 'images/assets/amitone.jpg' },
@@ -273,7 +284,10 @@ function initContactForm() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', initContactForm);
+document.addEventListener("DOMContentLoaded", () => {
+  initContactForm();
+});
+
 
 
 AOS.init();
